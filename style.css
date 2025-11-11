@@ -81,6 +81,29 @@ body {
     margin-right: 36px;
 }
 
+@keyframes box {
+    0% {
+        transform: translateX(0);
+    }
+
+    40% {
+        transform: translateX(-15px);
+    }
+
+    60% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(-10px);
+    }
+}
+
+.card p.box:hover {
+    animation: box 0.6s cubic-bezier(.57, 1.42, .89, -0.21);
+}
+
+
 .delete-btn {
     position: absolute;
     top: 0.5rem;

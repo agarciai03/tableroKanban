@@ -36,11 +36,12 @@ botonesAdd.forEach(function (boton) {
             tarjeta.className = 'card';
             tarjeta.draggable = true;
             tarjeta.innerHTML = `
-        <p>${texto}</p>
-        <button class="delete-btn">X</button>
+            <p class="box">${texto}</p>
+            <button class="delete-btn">X</button>
         `;
 
-        //funcionalidad boton eliminar(X)
+
+            //funcionalidad boton eliminar(X)
             const btnEliminar = tarjeta.querySelector('.delete-btn');
             btnEliminar.addEventListener('click', function () {
                 tarjeta.remove();
