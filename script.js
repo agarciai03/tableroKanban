@@ -43,24 +43,37 @@ botonesAdd.forEach(function (boton) {
         `;
 
 
-        //funcionalidad boton eliminar(X)
-        const btnEliminar = tarjeta.querySelector('.delete-btn');
-        btnEliminar.addEventListener('click', function(){
-            tarjeta.remove;
-        });
+            //funcionalidad boton eliminar(X)
+            const btnEliminar = tarjeta.querySelector('.delete-btn');
+            btnEliminar.addEventListener('click', function () {
+                tarjeta.remove;
+            });
 
 
-        //drag and drop
-        tarjeta.addEventListener('dragstart', function(event){
-            tarjeta.dataset.id = Date.now();
-            event.dataTransfer,setData('text/plain', tarjeta.dataset.id);
-        });
+            //drag and drop
+            tarjeta.addEventListener('dragstart', function (event) {
+                tarjeta.dataset.id = Date.now();
+                event.dataTransfer, setData('text/plain', tarjeta.dataset.id);
+            });
 
-        contenedorTarjetas.insertBefore(tarjeta, formulario);
-        formulario.remove();
+            contenedorTarjetas.insertBefore(tarjeta, formulario);
+            formulario.remove();
 
         });
     })
-}
-)
+});
+
+//configuramos el drag and drop
+contenedores.forEach(function (contenedores) {
+    contenedores.addEventListener('dragover', function (event) {
+        event.preventDefault();
+
+        const id = event.dataTransfer.getData('text/plain');
+        const tarjeta = document.querySelector(`[data-id="${id}"]`);
+
+        if (tarjeta && tarjeta.parentElement != columna) {
+            columna.appendChild(tarjeta);
+        }
+    })
+})
 
