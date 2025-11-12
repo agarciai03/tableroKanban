@@ -6,8 +6,7 @@
     --text-light: #363636;
     --border-radius: 3px;
     --shadow-sm: 0 1px 0 rgba(83, 83, 83, 0.26);
-    --shadow-md: 0 2px 5px rgba(0, 0, 0, .1);
-    --transition: all 0.2s ease;
+    --shadow-md: 0 2px 5px #e0abff;
 }
 
 * {
@@ -62,7 +61,9 @@ body {
     box-shadow: var(--shadow-md);
     position: relative;
     cursor: grab;
-    transition: var(--transition);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 .card:active {
@@ -86,22 +87,16 @@ body {
         transform: translateX(0);
     }
 
-    40% {
-        transform: translateX(-15px);
-    }
-
-    60% {
-        transform: translateX(-10px);
-    }
-
     100% {
         transform: translateX(-10px);
     }
 }
 
 .card p.box:hover {
-    animation: box 0.6s cubic-bezier(.57, 1.42, .89, -0.21);
+    animation: box 1.2s linear forwards;
 }
+
+
 
 
 .delete-btn {
