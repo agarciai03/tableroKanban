@@ -2,10 +2,10 @@
     --bg-main: #e0abff;
     --bg-col: #ebecf0;
     --bg-card: #ffffff;
-    --text: #172b4d;
-    --text-light: #6b778c;
+    --text: #000000;
+    --text-light: #363636;
     --border-radius: 3px;
-    --shadow-sm: 0 1px 0 rgba(9, 30, 66, .25);
+    --shadow-sm: 0 1px 0 rgba(83, 83, 83, 0.26);
     --shadow-md: 0 2px 5px rgba(0, 0, 0, .1);
     --transition: all 0.2s ease;
 }
@@ -135,6 +135,7 @@ body {
     cursor: pointer;
     border-radius: 3px;
     transition: background-color 0.2s ease;
+    box-shadow: var(--shadow-md);
 }
 
 .add-btn:hover {
