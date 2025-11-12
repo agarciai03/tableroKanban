@@ -14,46 +14,20 @@
     <main class="board">
         <section class="column" id="todo">
             <h2>Por Hacer</h2>
-            <div class="cards" data-column="todo">
-                <article class="card" draggable="true">
-                    <p class="box">Terminar la tarea 2 de cliente</p>
-                    <button class="delete-btn">X</button>
-                </article>
-                <article class="card" draggable="true">
-                    <p class="box">Terminar la tarea 1 de cliente</p>
-                    <button class="delete-btn">X</button>
-                </article>
-            </div>
+            <div class="cards" data-column="todo"></div>
             <button class="add-btn" data-column="todo">+ Añade una tarjeta</button>
         </section>
-
         <section class="column" id="doing">
             <h2>En progreso</h2>
-            <div class="cards" data-column="doing">
-                <article class="card" draggable="true">
-                    <p class="box">Terminar la tarea 3 de cliente</p>
-                    <button class="delete-btn">X</button>
-                </article>
-            </div>
+            <div class="cards" data-column="doing"></div>
             <button class="add-btn" data-column="doing">+ Añade una tarjeta</button>
         </section>
-
         <section class="column" id="done">
             <h2>Hecho</h2>
-            <div class="cards" data-column="done">
-                <article class="card" draggable="true">
-                    <p class="box">Terminar la tarea 2 de diseño</p>
-                    <button class="delete-btn">X</button>
-                </article>
-                <article class="card" draggable="true">
-                    <p class="box">Terminar la tarea 1 de servidor</p>
-                    <button class="delete-btn">X</button>
-                </article>
-            </div>
+            <div class="cards" data-column="done"></div>
             <button class="add-btn" data-column="done">+ Añade una tarjeta</button>
         </section>
     </main>
-
     <template id="card-form">
         <form class="card-form">
             <input type="text" placeholder="Introduce un título" maxlength="60" required />
@@ -63,7 +37,6 @@
             </div>
         </form>
     </template>
-
 </body>
 
 </html>
